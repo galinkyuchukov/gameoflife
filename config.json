@@ -1,0 +1,7 @@
+{
+    "width": 650,
+    "height":450,
+    "speed":40,
+    "cellsize": 2,
+    "randomize": true
+}

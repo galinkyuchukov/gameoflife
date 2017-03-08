@@ -1,0 +1,22 @@
+Conway`s Game of Life
+
+Features: 
+    * configurable env. options
+    * randomization mode
+    * speed adjust
+    * Manual generation step
+    * Auro-run
+    * Generation count
+    * log view
+
+Requirements:
+    * Node.js 6.9.2
+    * Firefox, Chrome
+    * Linux
+
+Installation
+    1. Extract gameoflife.zip
+    2. cd to folder
+    3. in terminal: npm install
+    4. in terminal: node app.js
+    5. load http://localhost:3000 in browser

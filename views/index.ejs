@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+        <title>Game of Life</title>
+        <link rel="stylesheet" type="text/css" href="assets/style.css" />
+        <script type="text/javascript" src="assets/app.js"></script>
+    </head>
+    <body>
+        
+        <div id="welcome">
+            <div class="welcome border-radius-2">
+
+                <% if(locals.file) { %>
+                    <h3>File exist: <%= file %></h3>
+                <% } %>
+
+                <form action="/simulation" method="POST" enctype="multipart/form-data" class="border-radius-2">
+                    <h4>Upload new .lif file:</h4>
+                    <input type="file" name="lif" />
+                    <input type="submit" name="action" value="Upload" class="btn border-radius-2" />
+                </form>
+
+                <p>OR</p>
+
+                <a href="/simulation" class="btn border-radius-2">Continue with randomization</a>
+
+            </div>
+        </div>
+
+    </body>
+</html>

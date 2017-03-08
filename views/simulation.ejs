@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+        <title>Game of Life</title>
+        <link rel="stylesheet" type="text/css" href="assets/style.css" />
+        <script type="text/javascript" src="assets/app.js"></script>
+    </head>
+    <body>
+
+        <div id="wrapper">
+
+            <div id="container">
+
+                <canvas id="gameworld"></canvas>
+                <div id="log">
+                    <% if (locals.file) { %>
+                        <p style="color:#216f21;">.lif file found! (<%= file%>)</p>
+                    <% } else { %>
+                        <p style="color:#ff0000;">.lif file not found! Randomization </p>
+                    <% } %>
+                </div>
+            </div>
+
+            <div class="controls">
+                <a href="javascript:;" onclick="world.evolve();" class="border-radius-2">Step >></a>
+                <a href="javascript:;" onclick="world.control(this);" class="border-radius-2">Start</a>
+                <a href="javascript:;" onclick="location.reload();" class="border-radius-2">Re-load</a>
+                
+                &nbsp;&nbsp;&nbsp;
+
+                Generations: <span id="genCount"></span>
+            </div>
+            
+            <% if(locals.file) { %>
+                <form action="/simulation" method="POST" enctype="multipart/form-data">
+                    <h3>File exist: <%= file %></h3>
+                    <div class="controls">
+                        <input type="submit" name="action" value="Delete" class="delete border-radius-2" />
+                    </div>
+                </form>
+            <% } else { %>
+                <div class="controls">
+                    <a href="/" class="btn border-radius-2">Upload File</a>
+                </div>
+            <% } %>
+
+        </div>
+
+        <script type="text/javascript">
+
+            var world = createWorld("gameworld", <%- options %>).initialize();
+
+            world.render();
+
+        </script>
+
+    </body>
+</html>
