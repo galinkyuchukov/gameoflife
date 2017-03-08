@@ -22,4 +22,4 @@ a.btn { padding:5px 8px; display:inline-block; text-decoration: none; }
 .controls a:hover { text-decoration: underline; }
 
 .controls a.btn { border:solid 1px #293251; background:#414A69; color:#fff; padding:5px 8px; } 
-.controls input.delete { background:#ff0000; color:#fff; border: none; }
+input.delete { background:#ff0000; color:#fff; border: none; }

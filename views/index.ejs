@@ -18,11 +18,15 @@
                     <h4>Upload new .lif file:</h4>
                     <input type="file" name="lif" />
                     <input type="submit" name="action" value="Upload" class="btn border-radius-2" />
+                    <% if(locals.file) { %>
+                        <input type="submit" name="action" value="Delete" class="delete border-radius-2" />
+                    <%}%>
                 </form>
 
-                <p>OR</p>
-
-                <a href="/simulation" class="btn border-radius-2">Continue with randomization</a>
+                <% if(!locals.file) { %>
+                    <p>OR</p>
+                    <a href="/simulation" class="btn border-radius-2">Continue with randomization</a>
+                <%}%>
 
             </div>
         </div>
