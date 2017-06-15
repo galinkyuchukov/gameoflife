@@ -2,6 +2,6 @@
     "width": 650,
     "height":450,
     "speed":40,
-    "cellsize": 2,
+    "cellsize": 5,
     "randomize": true
 }
